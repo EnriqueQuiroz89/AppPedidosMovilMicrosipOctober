@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        tools:context=".Activities.LoginActivity">
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="4"
+            android:background="@color/titleActivity"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="ACCESO"
+            android:textColor="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/amEtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="#FAFAF9F9"
+            android:hint="password"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="Aceptar"
+            android:onClick="validatePassword"
+            />
+    </LinearLayout>
+</RelativeLayout>
