@@ -69,19 +69,24 @@ class ClientRecyclerViewActivity : AppCompatActivity() {
 //accion de actualizar
    actionRefresh()
 
+
+                                                       }
+
+// habilita 
+
+    fun checkInternet(){
         val networkConnection = NetworkInfo(applicationContext)
         networkConnection.observe(this, Observer { isConnected->
 
             if(isConnected){
                 Toast.makeText(applicationContext, "CONEXION ACTIVA", Toast.LENGTH_LONG).show()
-                           }else{
+            }else{
                 Toast.makeText(applicationContext, "CONEXION INACTIVA", Toast.LENGTH_LONG).show()
-                                }
+            }
         })
 
-                                                       }
+    }
 
-// habilita 
 
     fun actionRefresh(){
         // Inicialize a new Random instante

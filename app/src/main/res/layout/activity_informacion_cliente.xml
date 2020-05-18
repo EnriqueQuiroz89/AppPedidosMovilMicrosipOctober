@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".Activities.InformacionClienteActivity">
+
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:text="logo cadena 24            version 1.0.0"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary"
+        android:text="Informacion general" />
+
+
+    <Button
+        android:id="@+id/aicBtnContado"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:drawableLeft="@mipmap/ic_launcher"
+        android:gravity="left|center_vertical"
+        android:text="   Contado" />
+
+    <Button
+        android:id="@+id/aicBtnCredito"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:drawableLeft="@mipmap/ic_launcher"
+        android:gravity="left|center_vertical"
+        android:text="   Credito" />
+
+    <Button
+        android:id="@+id/aicBtnNoventa"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:drawableLeft="@mipmap/ic_launcher"
+        android:gravity="left|center_vertical"
+        android:text="   No venta" />
+
+    <Button
+        android:id="@+id/aicBtnCotizacion"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:drawableLeft="@mipmap/ic_launcher"
+        android:gravity="left|center_vertical"
+        android:text="   Cotizacion" />
+
+
+    <Button
+        android:id="@+id/aicBtnCobranza"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:drawableLeft="@mipmap/ic_launcher"
+        android:gravity="left|center_vertical"
+        android:text="   Cobranza" />
+
+
+    <Button
+        android:id="@+id/aicBtnRuta"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:drawableLeft="@mipmap/ic_launcher"
+        android:gravity="left|center_vertical"
+        android:text="   Ruta desde aqui" />
+
+</LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
