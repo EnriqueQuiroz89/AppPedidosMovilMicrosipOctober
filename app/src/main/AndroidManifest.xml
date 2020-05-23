@@ -12,7 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.InformacionClienteActivity"></activity>
+        <activity android:name=".Activities.DetallePedidosActivity"></activity>
+        <activity android:name=".Activities.PedidosRecyclerviewActivity" />
+        <activity android:name=".Activities.ArticulosRecyclerviewActivity" />
+        <activity android:name=".Activities.InformacionClienteActivity" />
         <activity android:name=".Activities.ClientRecyclerViewActivity" />
         <activity android:name=".Activities.MainMenuActivity" />
         <activity android:name=".Activities.LoginActivity" />

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/search_item"
+        android:icon="@drawable/ic_search"
+        android:title="Search"
+        android:hint="Nombre, codigo o clave alterna"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="always" />
+
+
+    <item
+        android:id="@+id/downloadArticulos"
+        android:icon="@drawable/ic_add_photo"
+        android:title="Descargar Articulos"/>
+
+    <item
+        android:id="@+id/deleteArticulos"
+        android:icon="@drawable/ic_add_photo"
+        android:title="Borrar Articulos"/>
+
+</menu>
+
+
+

@@ -7,9 +7,12 @@ android:layout_height="match_parent"
 tools:context=".Activities.InformacionClienteActivity">
 
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
-<LinearLayout
+    <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_centerVertical="true"
@@ -87,22 +90,70 @@ tools:context=".Activities.InformacionClienteActivity">
         android:gravity="left|center_vertical"
         android:text="   Ruta desde aqui" />
 
+
+
+    <TextView
+        android:id="@+id/aicTvClave"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Clave:" />
+
+    <TextView
+        android:id="@+id/aicTvNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Nombre:" />
+
+    <TextView
+        android:id="@+id/aicTvDireccion"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Direccion:" />
+
+    <TextView
+        android:id="@+id/aicTvPoblacion"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Poblacion:" />
+
+    <TextView
+        android:id="@+id/aicTvColonia"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Colonia:" />
+
+    <TextView
+        android:id="@+id/aicTvLatitud"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Latitud:" />
+
+    <TextView
+        android:id="@+id/aicTvLongitud"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Longitud:" />
+
+    <TextView
+        android:id="@+id/aicTvSaldo"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Saldo:" />
+
+
 </LinearLayout>
 
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:orientation="vertical">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-
-    </LinearLayout>
+    </ScrollView>
 
 
 

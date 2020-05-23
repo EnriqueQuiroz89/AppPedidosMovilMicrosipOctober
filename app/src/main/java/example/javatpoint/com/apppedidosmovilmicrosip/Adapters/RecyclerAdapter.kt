@@ -1,6 +1,7 @@
 package example.javatpoint.com.apppedidosmovilmicrosip.Adapters
 
 import android.content.Context
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Filter
 import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
+import example.javatpoint.com.apppedidosmovilmicrosip.Activities.InformacionClienteActivity
 import example.javatpoint.com.apppedidosmovilmicrosip.DataModel.Clientes
 import example.javatpoint.com.apppedidosmovilmicrosip.R
 import kotlinx.android.synthetic.main.layout_item_cliente.view.*
@@ -40,9 +42,9 @@ var clientesFilterList = ArrayList<Clientes>()
 
                     // para cada renglon en el ArrayList
                     for(row in clientesList){
-                     if(row.id_cliente!!.toString().toLowerCase().contains(charSearch.toLowerCase())
+                     if(row.nombre_cliente!!.toString().toLowerCase().contains(charSearch.toLowerCase())
                          ||
-                        row.clave_cliente!!.toString().toLowerCase().contains(charSearch.toLowerCase()) )
+                         row.clave_cliente!!.toString().toLowerCase().contains(charSearch.toLowerCase()) )
                        // si coincide lo agrega a la lista
                          resultList.add(row)
                                       } // fin del bucle
@@ -93,7 +95,6 @@ var clientesFilterList = ArrayList<Clientes>()
         holder.bind(clientesFilterList[position])
     }
 
-
     class ViewHolder(var vista: View, var contexto: Context) : RecyclerView.ViewHolder(vista) {
 
         //en una vista(elemento_lista_usuario)
@@ -105,7 +106,26 @@ var clientesFilterList = ArrayList<Clientes>()
             // asignacion de los datos pasados a la plantilla de layout_item_post en cada campo
             vista.licTvClaveCliente.text = cliente.clave_cliente
             vista.licTvNombreCliente.text = cliente.nombre_cliente
+
+           // mostrarOpcionesDelCliente(vista,cliente)
+
+            vista.setOnClickListener {
+                contexto.startActivity(Intent(contexto, InformacionClienteActivity::class.java)
+                    .putExtra("cli",cliente) )
+            }
+            // Otorga la funcion de escucha al Item del RecyclerView
+            mostrarOpcionesDelCliente(vista,cliente)
                                     } // fin de bind
+
+
+    // Metodo muestra las opciones que tiene un cliente y su info completa
+        fun mostrarOpcionesDelCliente(vista: View, cliente:Clientes){
+
+            vista.setOnClickListener {
+                contexto.startActivity(Intent(contexto, InformacionClienteActivity::class.java)
+                    .putExtra("cliente",cliente) )
+                                     }
+                                                                    }
 
     } // Fin del ViewHolder()
 

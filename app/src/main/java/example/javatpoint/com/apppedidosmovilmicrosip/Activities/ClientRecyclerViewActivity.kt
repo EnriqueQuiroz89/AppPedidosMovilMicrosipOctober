@@ -62,8 +62,9 @@ class ClientRecyclerViewActivity : AppCompatActivity() {
         //le da un nombre a la actividad
         this.setTitle(R.string.activity_clientes)
 //Este metodo llena al ArrayList<Clientes> con los datos de la base datos
- /* fillListaClientes()*/
-  fillListaClientesFake()
+ fillListaClientes()
+//Llena los datos con datos estaticos y falsos
+//  fillListaClientesFake()
 // This metodo configura la vista de los Clientes en el RecyclerView
   setUpRecyclerView()
 //accion de actualizar
@@ -105,7 +106,9 @@ class ClientRecyclerViewActivity : AppCompatActivity() {
     private fun playToRunnable(){  //inicializa un nuevo runnable
         mRunnable= Runnable {
             //invoca el Renderizado nuevamente
-            showClientesOnRecyclerView()
+          //  showClientesOnRecyclerView()
+            //invoca el Renderizado nuevamente
+            setUpRecyclerView()
             //Oculta el icono animado de "arrastra para refrescar"
             swipeRefreshLayout.isRefreshing= false
                             }// fin de Runnable
@@ -118,15 +121,15 @@ class ClientRecyclerViewActivity : AppCompatActivity() {
     fun fillListaClientesFake():ArrayList<Clientes>{
 
         val fillTablesDataFake = FillTablesDataFake()
-       listaClientesFake= fillTablesDataFake.fillListaClientes()
+        listaClientesFake= fillTablesDataFake.fillListaClientes()
 
 
-      return listaClientesFake
+        return listaClientesFake
     }
 
-    //  llena de Objetos "Cliente" el ArrayList listaClientes y la devuelve llena
+    //  llena de Objetos "Cliente" que provienen de la base de datos el ArrayList listaClientes y la devuelve llena
     fun fillListaClientes(): ArrayList<Clientes>{
-                    listaClientes= databaseHandler.viewClientesForRecycler()
+        listaClientes= databaseHandler.viewClientesForRecycler()
         return listaClientes      } //retorna a la lista llena de datos
 
 
@@ -146,10 +149,7 @@ class ClientRecyclerViewActivity : AppCompatActivity() {
         mAdapter= RecyclerAdapter(listaClientes,this)
  */
    //el adaptador usara un ArrayList con datos estaticos declarados en el programa
-        mAdapter= RecyclerAdapter(listaClientesFake,this)
-
-
-
+        mAdapter= RecyclerAdapter(listaClientes,this)
 
    // asigna adaptador a RecyclerView
         recyclerView.adapter= mAdapter
@@ -225,11 +225,15 @@ override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Crea el objeto del manejador de Base de datos
         val databaseHandler= DatabaseHandler(this)
 
+     /*           SUPER IMPORTANTE
         // llamando la funcion viewEmployeForRecycler del DatabaseHandler para leer los registros
         // este metodo devuelve un ArrayList que ocupa
         val emp: ArrayList<Clientes> = databaseHandler.viewClientesForRecycler()
         aclRvClientes.adapter = RecyclerAdapter(emp, this)
-                                           }
+       */
+        aclRvClientes.adapter = RecyclerAdapter(listaClientesFake, this)
+
+    }
 
 
 
@@ -244,7 +248,8 @@ override fun onOptionsItemSelected(item: MenuItem): Boolean {
     // EN OTRA CLASE
     //Ejecuta la funcion que descarga clientes y los almacena en la base de datos
        private fun downloadClientesToDatabase(){
-        val conteo = databaseHandler.getClientesFromApiToInsertInTableClientes()
+     //   val conteo = databaseHandler.getClientesFromApiToInsertInTableClientes()
+         val conteo= databaseHandler.getFakeDataToInsertInTableClientes()
         Toast.makeText(applicationContext, "TEl conteo arrojo ${conteo}", Toast.LENGTH_LONG).show()
                                    }
 

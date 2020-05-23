@@ -15,22 +15,25 @@ class MainMenuActivity : AppCompatActivity() {
     }
 
     fun showClients(view: View){
-
         val intent= Intent(this, ClientRecyclerViewActivity::class.java)
         startActivity(intent)}
 
-   override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+
+    fun showArticulos(view: View){
+        val intent= Intent(this, ArticulosRecyclerviewActivity::class.java)
+        startActivity(intent)}
+
+
+    fun showPedidos(view: View){
+        val intent= Intent(this, PedidosRecyclerviewActivity::class.java)
+        startActivity(intent)}
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater = menuInflater
         inflater.inflate(R.menu.clients_menu,menu)
         return super.onCreateOptionsMenu(menu)
     }
 
-
-
-
-
-
-
- }
+  }
 
 

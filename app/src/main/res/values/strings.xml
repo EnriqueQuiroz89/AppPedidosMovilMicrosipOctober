@@ -2,4 +2,25 @@
     <string name="app_name">AppPedidosMovilMicrosip</string>
     <string name="select_title">Seleccione una opcion</string>
     <string name="activity_clientes">Listado de Clientes</string>
+    <string name="activity_articulos">Listado de Articulos</string>
+
+
+    <string name="clave">Clave: %1$s </string>
+    <string name="nombre">Nombre: %1$s </string>
+    <string name="direccion">Direccion: %1$s </string>
+    <string name="poblacion">Poblacion: %1$s </string>
+    <string name="colonia">Colonia: %1$s minutos </string>
+    <string name="latitud">Latitud: %1$s </string>
+    <string name="longitud">Longitud: %1$s </string>
+    <string name="saldo">Saldo: %1$s </string>
+
+
+    <string name="c_principal">Clave: %1$s</string>
+    <string name="c_alterna">Clave alterna: %1$s</string>
+    <string name="nombre_art">Nombre: %1$s</string>
+    <string name="precio_dist">Precio ditribuidor: %1$s</string>
+    <string name="impuesto">Impuesto: %1$s</string>
+    <string name="existencia">Existencia: %1$s</string>
+
+
 </resources>
